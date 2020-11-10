@@ -1,6 +1,7 @@
 from toh import *
 from tower import *
 from TowerOfHanoi import *
+import time
 def run(self): 
     self.showtower()
     Stack_A, Stack_B, Stack_C = self.towers
@@ -11,6 +12,7 @@ def mdisk(self, Stack_A, Stack_B, Stack_C, n):
         return
     self.mdisk(Stack_A, Stack_B, Stack_C, n - 1)
     self.n_move += 1
+    time.sleep(2)
     print('moving  from {} to {}.'.format(Stack_A.name, Stack_B.name))
     disk = Stack_A.pop()
     Stack_B.push(disk)
